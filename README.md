@@ -116,5 +116,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 🙌 Credits
 
-Developed by Korey Sherwin  
-Built with help from real-world testing and Anthem RS232 protocol documentation
+Developed by  Korey Sherwin  
+Built with ChatGPT help from real-world testing and Anthem RS232 protocol documentation
