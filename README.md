@@ -47,6 +47,7 @@ Control Anthem processors (Statement D1, D2, AVM50) via RS232 using Indigo and a
 2. Enter:
    - IP address of your Global Caché IP2SL
    - Port (typically `4999`)
+   - Command Terminator: LF (\n)
 3. Select processor model:
    - D1
    - D2 / AVM50
