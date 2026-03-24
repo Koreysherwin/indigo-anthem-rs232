@@ -1,6 +1,6 @@
 # Anthem RS232 Plugin for Indigo
 
-Control Anthem processors (Statement D1, D2, AVM50) via RS232 using Indigo and a Global Caché IP2SL or direct serial connection.
+Control Anthem processors (Statement D1, D2, AVM50) via RS232 using Indigo and a Global Caché IP2SL.
 
 ---
 
