@@ -27,8 +27,8 @@ Control Anthem processors (Statement D1, D2, AVM50) via RS232 using Indigo and a
   - Statement D2
   - AVM50
 - Serial connection:
-  - Global Caché IP2SL (recommended)
-  - or direct serial interface
+  - Global Caché IP2SL
+ 
 
 ---
 
