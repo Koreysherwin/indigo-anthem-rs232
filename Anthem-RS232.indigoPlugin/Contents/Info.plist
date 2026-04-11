@@ -12,10 +12,10 @@
 	<string>Anthem-RS232</string>
 
 	<key>CFBundleVersion</key>
-	<string>0.3.32</string>
+	<string>0.3.33</string>
 
 	<key>CFBundleShortVersionString</key>
-	<string>0.3.32</string>
+	<string>0.3.33</string>
 
 	<key>PluginName</key>
 	<string>Anthem RS232</string>
