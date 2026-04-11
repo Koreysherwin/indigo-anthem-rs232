@@ -111,7 +111,7 @@ Shows detailed RS232 transmit and receive logging for troubleshooting and develo
 
 ## Release Information
 
-Current public repository release: `v0.3.32`
+Current public repository release: `v0.3.34`
 
 For downloads and release notes, see the repository Releases section.
 ## License
