@@ -1,0 +1,1212 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Actions>
+    <Action id="muteOff" deviceFilter="self">
+        <Name>Z1 Basic Mute Off</Name>
+        <CallbackMethod>mute_off</CallbackMethod>
+    </Action>
+    <Action id="muteOn" deviceFilter="self">
+        <Name>Z1 Basic Mute On</Name>
+        <CallbackMethod>mute_on</CallbackMethod>
+    </Action>
+    <Action id="powerOff" deviceFilter="self">
+        <Name>Z1 Basic Power Off</Name>
+        <CallbackMethod>power_off</CallbackMethod>
+    </Action>
+    <Action id="powerOn" deviceFilter="self">
+        <Name>Z1 Basic Power On</Name>
+        <CallbackMethod>power_on</CallbackMethod>
+    </Action>
+    <Action id="setSource" deviceFilter="self">
+        <Name>Z1 Basic Set Source</Name>
+        <CallbackMethod>source_set</CallbackMethod>
+        <ConfigUI>
+            <Field type="menu" id="sourceCode">
+                <Label>Source</Label>
+                <List>
+                    <Option value="0">CD</Option>
+                    <Option value="5">DVD1</Option>
+                    <Option value="6">TV1</Option>
+                    <Option value="7">SAT1</Option>
+                    <Option value="9">AUX</Option>
+                    <Option value="d">DVD2</Option>
+                    <Option value="g">TV2</Option>
+                    <Option value="j">SAT2</Option>
+                </List>
+                <DefaultValue>5</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="setVolume" deviceFilter="self">
+        <Name>Z1 Basic Set Volume (dB)</Name>
+        <CallbackMethod>volume_set</CallbackMethod>
+        <ConfigUI>
+            <Field type="textfield" id="volumeDb">
+                <Label>Volume (dB)</Label>
+                <Description>Example: -35.0</Description>
+                <DefaultValue>-35.0</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="volumeDown" deviceFilter="self">
+        <Name>Z1 Basic Volume Down</Name>
+        <CallbackMethod>volume_step_down</CallbackMethod>
+        <ConfigUI>
+            <Field type="textfield" id="stepDb">
+                <Label>Step (dB)</Label>
+                <Description>Default 1.0 dB.</Description>
+                <DefaultValue>1.0</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="volumeUp" deviceFilter="self">
+        <Name>Z1 Basic Volume Up</Name>
+        <CallbackMethod>volume_step_up</CallbackMethod>
+        <ConfigUI>
+            <Field type="textfield" id="stepDb">
+                <Label>Step (dB)</Label>
+                <Description>Default 1.0 dB.</Description>
+                <DefaultValue>1.0</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="z1Input60Effect" deviceFilter="self">
+        <Name>Z1 Proc 6.0 Input Effect</Name>
+        <CallbackMethod>z1_input60_effect</CallbackMethod>
+        <ConfigUI>
+            <Field type="menu" id="sourceCode">
+                <Label>Source</Label>
+                <List>
+                    <Option value="0">CD</Option>
+                    <Option value="1">2-Ch BAL</Option>
+                    <Option value="2">6-Ch S/E</Option>
+                    <Option value="3">Tape</Option>
+                    <Option value="4">FM/AM</Option>
+                    <Option value="5">DVD1</Option>
+                    <Option value="6">TV1</Option>
+                    <Option value="7">SAT1</Option>
+                    <Option value="8">VCR</Option>
+                    <Option value="9">AUX</Option>
+                    <Option value="d">DVD2</Option>
+                    <Option value="e">DVD3</Option>
+                    <Option value="f">DVD4</Option>
+                    <Option value="g">TV2</Option>
+                    <Option value="h">TV3</Option>
+                    <Option value="i">TV4</Option>
+                    <Option value="j">SAT2</Option>
+                </List>
+                <DefaultValue>2</DefaultValue>
+            </Field>
+            <Field type="menu" id="modeCode">
+                <Label>Effect</Label>
+                <List>
+                    <Option value="0">Off</Option>
+                    <Option value="1">THX Cinema 5.1</Option>
+                    <Option value="2">THX Ultra2 Cinema</Option>
+                    <Option value="3">THX MusicMode</Option>
+                    <Option value="4">THX Surround EX</Option>
+                    <Option value="5">THX Games Mode</Option>
+                    <Option value="6">PLIIx Movie</Option>
+                    <Option value="7">PLIIx Movie + THX</Option>
+                    <Option value="8">PLIIx Music</Option>
+                    <Option value="9">Dolby Digital EX</Option>
+                    <Option value="a">Neo:6</Option>
+                    <Option value="b">Neo:6 + THX</Option>
+                </List>
+                <DefaultValue>0</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="z1Dd20FlaggedEffect" deviceFilter="self">
+        <Name>Z1 Proc DD 2.0 Flagged Effect</Name>
+        <CallbackMethod>z1_dd20_flagged_effect</CallbackMethod>
+        <ConfigUI>
+            <Field type="menu" id="sourceCode">
+                <Label>Source</Label>
+                <List>
+                    <Option value="0">CD</Option>
+                    <Option value="1">2-Ch BAL</Option>
+                    <Option value="2">6-Ch S/E</Option>
+                    <Option value="3">Tape</Option>
+                    <Option value="4">FM/AM</Option>
+                    <Option value="5">DVD1</Option>
+                    <Option value="6">TV1</Option>
+                    <Option value="7">SAT1</Option>
+                    <Option value="8">VCR</Option>
+                    <Option value="9">AUX</Option>
+                    <Option value="d">DVD2</Option>
+                    <Option value="e">DVD3</Option>
+                    <Option value="f">DVD4</Option>
+                    <Option value="g">TV2</Option>
+                    <Option value="h">TV3</Option>
+                    <Option value="i">TV4</Option>
+                    <Option value="j">SAT2</Option>
+                </List>
+                <DefaultValue>9</DefaultValue>
+            </Field>
+            <Field type="menu" id="modeCode">
+                <Label>Effect</Label>
+                <List>
+                    <Option value="0">Off</Option>
+                    <Option value="1">AnthemLogic-Music</Option>
+                    <Option value="2">AnthemLogic-Cinema</Option>
+                    <Option value="3">Pro Logic IIx-Music</Option>
+                    <Option value="4">Pro Logic IIx-Movie</Option>
+                    <Option value="5">Pro Logic</Option>
+                    <Option value="6">Neo:6-Music</Option>
+                    <Option value="7">Neo:6-Cinema</Option>
+                    <Option value="8">All Channel Stereo</Option>
+                    <Option value="9">All Channel Mono</Option>
+                    <Option value="a">Mono</Option>
+                    <Option value="b">Mono Academy</Option>
+                    <Option value="c">Pro Logic IIx-Matrix</Option>
+                    <Option value="d">Pro Logic IIx-Game</Option>
+                </List>
+                <DefaultValue>1</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="z1Dd20ThxMode" deviceFilter="self">
+        <Name>Z1 Proc DD 2.0 THX Mode</Name>
+        <CallbackMethod>z1_dd20_thx_mode</CallbackMethod>
+        <ConfigUI>
+            <Field type="menu" id="sourceCode">
+                <Label>Source</Label>
+                <List>
+                    <Option value="0">CD</Option>
+                    <Option value="1">2-Ch BAL</Option>
+                    <Option value="2">6-Ch S/E</Option>
+                    <Option value="3">Tape</Option>
+                    <Option value="4">FM/AM</Option>
+                    <Option value="5">DVD1</Option>
+                    <Option value="6">TV1</Option>
+                    <Option value="7">SAT1</Option>
+                    <Option value="8">VCR</Option>
+                    <Option value="9">AUX</Option>
+                    <Option value="d">DVD2</Option>
+                    <Option value="e">DVD3</Option>
+                    <Option value="f">DVD4</Option>
+                    <Option value="g">TV2</Option>
+                    <Option value="h">TV3</Option>
+                    <Option value="i">TV4</Option>
+                    <Option value="j">SAT2</Option>
+                </List>
+                <DefaultValue>9</DefaultValue>
+            </Field>
+            <Field type="menu" id="modeCode">
+                <Label>THX Mode</Label>
+                <List>
+                    <Option value="0">Off</Option>
+                    <Option value="1">THX Cinema</Option>
+                    <Option value="2">THX Games</Option>
+                </List>
+                <DefaultValue>0</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="z1Dd51Effect" deviceFilter="self">
+        <Name>Z1 Proc Dolby Digital 5.1 Effect</Name>
+        <CallbackMethod>z1_dd51_effect</CallbackMethod>
+        <ConfigUI>
+            <Field type="menu" id="sourceCode">
+                <Label>Source</Label>
+                <List>
+                    <Option value="0">CD</Option>
+                    <Option value="1">2-Ch BAL</Option>
+                    <Option value="2">6-Ch S/E</Option>
+                    <Option value="3">Tape</Option>
+                    <Option value="4">FM/AM</Option>
+                    <Option value="5">DVD1</Option>
+                    <Option value="6">TV1</Option>
+                    <Option value="7">SAT1</Option>
+                    <Option value="8">VCR</Option>
+                    <Option value="9">AUX</Option>
+                    <Option value="d">DVD2</Option>
+                    <Option value="e">DVD3</Option>
+                    <Option value="f">DVD4</Option>
+                    <Option value="g">TV2</Option>
+                    <Option value="h">TV3</Option>
+                    <Option value="i">TV4</Option>
+                    <Option value="j">SAT2</Option>
+                </List>
+                <DefaultValue>9</DefaultValue>
+            </Field>
+            <Field type="menu" id="modeCode">
+                <Label>Effect</Label>
+                <List>
+                    <Option value="0">Off</Option>
+                    <Option value="1">THX Cinema 5.1</Option>
+                    <Option value="2">THX Ultra2 Cinema</Option>
+                    <Option value="3">THX MusicMode</Option>
+                    <Option value="4">THX Surround EX</Option>
+                    <Option value="5">THX Games Mode</Option>
+                    <Option value="6">PLIIx Movie</Option>
+                    <Option value="7">PLIIx Movie + THX</Option>
+                    <Option value="8">PLIIx Music</Option>
+                    <Option value="9">Dolby Digital EX</Option>
+                    <Option value="a">Neo:6</Option>
+                    <Option value="b">Neo:6 + THX</Option>
+                </List>
+                <DefaultValue>0</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="z1DdExEffect" deviceFilter="self">
+        <Name>Z1 Proc Dolby Digital EX Effect</Name>
+        <CallbackMethod>z1_dd_ex_effect</CallbackMethod>
+        <ConfigUI>
+            <Field type="menu" id="sourceCode">
+                <Label>Source</Label>
+                <List>
+                    <Option value="0">CD</Option>
+                    <Option value="1">2-Ch BAL</Option>
+                    <Option value="2">6-Ch S/E</Option>
+                    <Option value="3">Tape</Option>
+                    <Option value="4">FM/AM</Option>
+                    <Option value="5">DVD1</Option>
+                    <Option value="6">TV1</Option>
+                    <Option value="7">SAT1</Option>
+                    <Option value="8">VCR</Option>
+                    <Option value="9">AUX</Option>
+                    <Option value="d">DVD2</Option>
+                    <Option value="e">DVD3</Option>
+                    <Option value="f">DVD4</Option>
+                    <Option value="g">TV2</Option>
+                    <Option value="h">TV3</Option>
+                    <Option value="i">TV4</Option>
+                    <Option value="j">SAT2</Option>
+                </List>
+                <DefaultValue>9</DefaultValue>
+            </Field>
+            <Field type="menu" id="modeCode">
+                <Label>Effect</Label>
+                <List>
+                    <Option value="0">Off</Option>
+                    <Option value="1">Dolby Digital EX</Option>
+                    <Option value="2">THX Surround EX</Option>
+                    <Option value="3">PLIIx Movie</Option>
+                    <Option value="4">PLIIx Movie + THX</Option>
+                    <Option value="5">PLIIx Music</Option>
+                    <Option value="6">Neo:6</Option>
+                    <Option value="7">Neo:6 + THX</Option>
+                </List>
+                <DefaultValue>1</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="z1Dts51Effect" deviceFilter="self">
+        <Name>Z1 Proc DTS 5.1 Effect</Name>
+        <CallbackMethod>z1_dts51_effect</CallbackMethod>
+        <ConfigUI>
+            <Field type="menu" id="sourceCode">
+                <Label>Source</Label>
+                <List>
+                    <Option value="0">CD</Option>
+                    <Option value="1">2-Ch BAL</Option>
+                    <Option value="2">6-Ch S/E</Option>
+                    <Option value="3">Tape</Option>
+                    <Option value="4">FM/AM</Option>
+                    <Option value="5">DVD1</Option>
+                    <Option value="6">TV1</Option>
+                    <Option value="7">SAT1</Option>
+                    <Option value="8">VCR</Option>
+                    <Option value="9">AUX</Option>
+                    <Option value="d">DVD2</Option>
+                    <Option value="e">DVD3</Option>
+                    <Option value="f">DVD4</Option>
+                    <Option value="g">TV2</Option>
+                    <Option value="h">TV3</Option>
+                    <Option value="i">TV4</Option>
+                    <Option value="j">SAT2</Option>
+                </List>
+                <DefaultValue>9</DefaultValue>
+            </Field>
+            <Field type="menu" id="modeCode">
+                <Label>Effect</Label>
+                <List>
+                    <Option value="0">Off</Option>
+                    <Option value="1">THX Cinema 5.1</Option>
+                    <Option value="2">THX Ultra2 Cinema</Option>
+                    <Option value="3">THX MusicMode</Option>
+                    <Option value="4">Neo:6 + THX</Option>
+                    <Option value="5">THX Games</Option>
+                    <Option value="6">PLIIx Movie</Option>
+                    <Option value="7">PLIIx Movie + THX</Option>
+                    <Option value="8">PLIIx Music</Option>
+                    <Option value="9">Dolby Digital EX</Option>
+                    <Option value="a">Neo:6</Option>
+                </List>
+                <DefaultValue>0</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="z1DtsEsMatrixEffect" deviceFilter="self">
+        <Name>Z1 Proc DTS ES Matrix Effect</Name>
+        <CallbackMethod>z1_dts_es_matrix_effect</CallbackMethod>
+        <ConfigUI>
+            <Field type="menu" id="sourceCode">
+                <Label>Source</Label>
+                <List>
+                    <Option value="0">CD</Option>
+                    <Option value="1">2-Ch BAL</Option>
+                    <Option value="2">6-Ch S/E</Option>
+                    <Option value="3">Tape</Option>
+                    <Option value="4">FM/AM</Option>
+                    <Option value="5">DVD1</Option>
+                    <Option value="6">TV1</Option>
+                    <Option value="7">SAT1</Option>
+                    <Option value="8">VCR</Option>
+                    <Option value="9">AUX</Option>
+                    <Option value="d">DVD2</Option>
+                    <Option value="e">DVD3</Option>
+                    <Option value="f">DVD4</Option>
+                    <Option value="g">TV2</Option>
+                    <Option value="h">TV3</Option>
+                    <Option value="i">TV4</Option>
+                    <Option value="j">SAT2</Option>
+                </List>
+                <DefaultValue>9</DefaultValue>
+            </Field>
+            <Field type="menu" id="modeCode">
+                <Label>Effect</Label>
+                <List>
+                    <Option value="0">Off</Option>
+                    <Option value="1">DTS ES Matrix</Option>
+                    <Option value="2">DTS ES Matrix + THX</Option>
+                    <Option value="3">PLIIx Movie</Option>
+                    <Option value="4">PLIIx Movie + THX</Option>
+                    <Option value="5">PLIIx Music</Option>
+                    <Option value="6">Dolby Digital EX</Option>
+                </List>
+                <DefaultValue>1</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="z1DynamicRangeCompression" deviceFilter="self">
+        <Name>Z1 Proc Dynamic Range Compression</Name>
+        <CallbackMethod>z1_dynamic_range_compression</CallbackMethod>
+        <ConfigUI>
+            <Field type="menu" id="valueCode">
+                <Label>Compression</Label>
+                <List>
+                    <Option value="0">Normal</Option>
+                    <Option value="1">Reduced</Option>
+                    <Option value="2">Late Night</Option>
+                </List>
+                <DefaultValue>0</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="z1ModeButtonStep" deviceFilter="self">
+        <Name>Z1 Proc Mode Up/Down</Name>
+        <CallbackMethod>z1_mode_button_step</CallbackMethod>
+        <ConfigUI>
+            <Field type="menu" id="dirCode">
+                <Label>Direction</Label>
+                <List>
+                    <Option value="1">Up</Option>
+                    <Option value="0">Down</Option>
+                </List>
+                <DefaultValue>1</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="z1Neo6CenterGain" deviceFilter="self">
+        <Name>Z1 Proc Neo:6 Center Gain</Name>
+        <CallbackMethod>z1_neo6_center_gain</CallbackMethod>
+        <ConfigUI>
+            <Field type="menu" id="sourceCode">
+                <Label>Source</Label>
+                <List>
+                    <Option value="0">CD</Option>
+                    <Option value="1">2-Ch BAL</Option>
+                    <Option value="2">6-Ch S/E</Option>
+                    <Option value="3">Tape</Option>
+                    <Option value="4">FM/AM</Option>
+                    <Option value="5">DVD1</Option>
+                    <Option value="6">TV1</Option>
+                    <Option value="7">SAT1</Option>
+                    <Option value="8">VCR</Option>
+                    <Option value="9">AUX</Option>
+                    <Option value="d">DVD2</Option>
+                    <Option value="e">DVD3</Option>
+                    <Option value="f">DVD4</Option>
+                    <Option value="g">TV2</Option>
+                    <Option value="h">TV3</Option>
+                    <Option value="i">TV4</Option>
+                    <Option value="j">SAT2</Option>
+                </List>
+                <DefaultValue>9</DefaultValue>
+            </Field>
+            <Field type="menu" id="valueCode">
+                <Label>Center Gain</Label>
+                <List>
+                    <Option value="0">0</Option>
+                    <Option value="1">1</Option>
+                    <Option value="2">2</Option>
+                    <Option value="3">3</Option>
+                    <Option value="4">4</Option>
+                    <Option value="5">5</Option>
+                </List>
+                <DefaultValue>2</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="z1MusicCenterWidth" deviceFilter="self">
+        <Name>Z1 Proc Pro Logic Music Center Width</Name>
+        <CallbackMethod>z1_music_center_width</CallbackMethod>
+        <ConfigUI>
+            <Field type="menu" id="sourceCode">
+                <Label>Source</Label>
+                <List>
+                    <Option value="0">CD</Option>
+                    <Option value="1">2-Ch BAL</Option>
+                    <Option value="2">6-Ch S/E</Option>
+                    <Option value="3">Tape</Option>
+                    <Option value="4">FM/AM</Option>
+                    <Option value="5">DVD1</Option>
+                    <Option value="6">TV1</Option>
+                    <Option value="7">SAT1</Option>
+                    <Option value="8">VCR</Option>
+                    <Option value="9">AUX</Option>
+                    <Option value="d">DVD2</Option>
+                    <Option value="e">DVD3</Option>
+                    <Option value="f">DVD4</Option>
+                    <Option value="g">TV2</Option>
+                    <Option value="h">TV3</Option>
+                    <Option value="i">TV4</Option>
+                    <Option value="j">SAT2</Option>
+                </List>
+                <DefaultValue>9</DefaultValue>
+            </Field>
+            <Field type="menu" id="valueCode">
+                <Label>Center Width</Label>
+                <List>
+                    <Option value="0">0</Option>
+                    <Option value="1">1</Option>
+                    <Option value="2">2</Option>
+                    <Option value="3">3</Option>
+                    <Option value="4">4</Option>
+                    <Option value="5">5</Option>
+                    <Option value="6">6</Option>
+                    <Option value="7">7</Option>
+                </List>
+                <DefaultValue>3</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="z1MusicDimension" deviceFilter="self">
+        <Name>Z1 Proc Pro Logic Music Dimension</Name>
+        <CallbackMethod>z1_music_dimension</CallbackMethod>
+        <ConfigUI>
+            <Field type="menu" id="sourceCode">
+                <Label>Source</Label>
+                <List>
+                    <Option value="0">CD</Option>
+                    <Option value="1">2-Ch BAL</Option>
+                    <Option value="2">6-Ch S/E</Option>
+                    <Option value="3">Tape</Option>
+                    <Option value="4">FM/AM</Option>
+                    <Option value="5">DVD1</Option>
+                    <Option value="6">TV1</Option>
+                    <Option value="7">SAT1</Option>
+                    <Option value="8">VCR</Option>
+                    <Option value="9">AUX</Option>
+                    <Option value="d">DVD2</Option>
+                    <Option value="e">DVD3</Option>
+                    <Option value="f">DVD4</Option>
+                    <Option value="g">TV2</Option>
+                    <Option value="h">TV3</Option>
+                    <Option value="i">TV4</Option>
+                    <Option value="j">SAT2</Option>
+                </List>
+                <DefaultValue>9</DefaultValue>
+            </Field>
+            <Field type="menu" id="valueCode">
+                <Label>Dimension</Label>
+                <List>
+                    <Option value="0">0</Option>
+                    <Option value="1">1</Option>
+                    <Option value="2">2</Option>
+                    <Option value="3">3</Option>
+                    <Option value="4">4</Option>
+                    <Option value="5">5</Option>
+                    <Option value="6">6</Option>
+                </List>
+                <DefaultValue>3</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="z1MusicPanorama" deviceFilter="self">
+        <Name>Z1 Proc Pro Logic Music Panorama</Name>
+        <CallbackMethod>z1_music_panorama</CallbackMethod>
+        <ConfigUI>
+            <Field type="menu" id="sourceCode">
+                <Label>Source</Label>
+                <List>
+                    <Option value="0">CD</Option>
+                    <Option value="1">2-Ch BAL</Option>
+                    <Option value="2">6-Ch S/E</Option>
+                    <Option value="3">Tape</Option>
+                    <Option value="4">FM/AM</Option>
+                    <Option value="5">DVD1</Option>
+                    <Option value="6">TV1</Option>
+                    <Option value="7">SAT1</Option>
+                    <Option value="8">VCR</Option>
+                    <Option value="9">AUX</Option>
+                    <Option value="d">DVD2</Option>
+                    <Option value="e">DVD3</Option>
+                    <Option value="f">DVD4</Option>
+                    <Option value="g">TV2</Option>
+                    <Option value="h">TV3</Option>
+                    <Option value="i">TV4</Option>
+                    <Option value="j">SAT2</Option>
+                </List>
+                <DefaultValue>9</DefaultValue>
+            </Field>
+            <Field type="menu" id="valueCode">
+                <Label>Panorama</Label>
+                <List>
+                    <Option value="0">Off</Option>
+                    <Option value="1">On</Option>
+                </List>
+                <DefaultValue>0</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="z1StereoInputEffect" deviceFilter="self">
+        <Name>Z1 Proc Stereo Input Effect</Name>
+        <CallbackMethod>z1_stereo_input_effect</CallbackMethod>
+        <ConfigUI>
+            <Field type="menu" id="sourceCode">
+                <Label>Source</Label>
+                <List>
+                    <Option value="0">CD</Option>
+                    <Option value="1">2-Ch BAL</Option>
+                    <Option value="2">6-Ch S/E</Option>
+                    <Option value="3">Tape</Option>
+                    <Option value="4">FM/AM</Option>
+                    <Option value="5">DVD1</Option>
+                    <Option value="6">TV1</Option>
+                    <Option value="7">SAT1</Option>
+                    <Option value="8">VCR</Option>
+                    <Option value="9">AUX</Option>
+                    <Option value="d">DVD2</Option>
+                    <Option value="e">DVD3</Option>
+                    <Option value="f">DVD4</Option>
+                    <Option value="g">TV2</Option>
+                    <Option value="h">TV3</Option>
+                    <Option value="i">TV4</Option>
+                    <Option value="j">SAT2</Option>
+                </List>
+                <DefaultValue>9</DefaultValue>
+            </Field>
+            <Field type="menu" id="modeCode">
+                <Label>Effect</Label>
+                <List>
+                    <Option value="0">Off</Option>
+                    <Option value="1">AnthemLogic-Music</Option>
+                    <Option value="2">AnthemLogic-Cinema</Option>
+                    <Option value="3">Pro Logic IIx-Music</Option>
+                    <Option value="4">Pro Logic IIx-Movie</Option>
+                    <Option value="5">Pro Logic</Option>
+                    <Option value="6">Neo:6-Music</Option>
+                    <Option value="7">Neo:6-Cinema</Option>
+                    <Option value="8">All Channel Stereo</Option>
+                    <Option value="9">All Channel Mono</Option>
+                    <Option value="a">Mono</Option>
+                    <Option value="b">Mono Academy</Option>
+                    <Option value="c">Pro Logic IIx-Matrix</Option>
+                    <Option value="d">Pro Logic IIx-Game</Option>
+                </List>
+                <DefaultValue>1</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="z1StereoThxMode" deviceFilter="self">
+        <Name>Z1 Proc Stereo THX Mode</Name>
+        <CallbackMethod>z1_stereo_thx_mode</CallbackMethod>
+        <ConfigUI>
+            <Field type="menu" id="sourceCode">
+                <Label>Source</Label>
+                <List>
+                    <Option value="0">CD</Option>
+                    <Option value="1">2-Ch BAL</Option>
+                    <Option value="2">6-Ch S/E</Option>
+                    <Option value="3">Tape</Option>
+                    <Option value="4">FM/AM</Option>
+                    <Option value="5">DVD1</Option>
+                    <Option value="6">TV1</Option>
+                    <Option value="7">SAT1</Option>
+                    <Option value="8">VCR</Option>
+                    <Option value="9">AUX</Option>
+                    <Option value="d">DVD2</Option>
+                    <Option value="e">DVD3</Option>
+                    <Option value="f">DVD4</Option>
+                    <Option value="g">TV2</Option>
+                    <Option value="h">TV3</Option>
+                    <Option value="i">TV4</Option>
+                    <Option value="j">SAT2</Option>
+                </List>
+                <DefaultValue>9</DefaultValue>
+            </Field>
+            <Field type="menu" id="modeCode">
+                <Label>THX Mode</Label>
+                <List>
+                    <Option value="0">Off</Option>
+                    <Option value="1">THX Cinema</Option>
+                    <Option value="2">THX Games</Option>
+                </List>
+                <DefaultValue>0</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="z1ThxButtonStep" deviceFilter="self">
+        <Name>Z1 Proc THX Mode Up/Down</Name>
+        <CallbackMethod>z1_thx_button_step</CallbackMethod>
+        <ConfigUI>
+            <Field type="menu" id="dirCode">
+                <Label>Direction</Label>
+                <List>
+                    <Option value="1">Up</Option>
+                    <Option value="0">Down</Option>
+                </List>
+                <DefaultValue>1</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="z1ThxReEqOff" deviceFilter="self">
+        <Name>Z1 Proc THX Re-EQ (THX Off)</Name>
+        <CallbackMethod>z1_thx_reeq_off</CallbackMethod>
+        <ConfigUI>
+            <Field type="menu" id="sourceCode">
+                <Label>Source</Label>
+                <List>
+                    <Option value="0">CD</Option>
+                    <Option value="1">2-Ch BAL</Option>
+                    <Option value="2">6-Ch S/E</Option>
+                    <Option value="3">Tape</Option>
+                    <Option value="4">FM/AM</Option>
+                    <Option value="5">DVD1</Option>
+                    <Option value="6">TV1</Option>
+                    <Option value="7">SAT1</Option>
+                    <Option value="8">VCR</Option>
+                    <Option value="9">AUX</Option>
+                    <Option value="d">DVD2</Option>
+                    <Option value="e">DVD3</Option>
+                    <Option value="f">DVD4</Option>
+                    <Option value="g">TV2</Option>
+                    <Option value="h">TV3</Option>
+                    <Option value="i">TV4</Option>
+                    <Option value="j">SAT2</Option>
+                </List>
+                <DefaultValue>9</DefaultValue>
+            </Field>
+            <Field type="menu" id="valueCode">
+                <Label>Re-EQ</Label>
+                <List>
+                    <Option value="0">Off</Option>
+                    <Option value="1">On</Option>
+                </List>
+                <DefaultValue>0</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="z1ThxReEqOn" deviceFilter="self">
+        <Name>Z1 Proc THX Re-EQ (THX On)</Name>
+        <CallbackMethod>z1_thx_reeq_on</CallbackMethod>
+        <ConfigUI>
+            <Field type="menu" id="sourceCode">
+                <Label>Source</Label>
+                <List>
+                    <Option value="0">CD</Option>
+                    <Option value="1">2-Ch BAL</Option>
+                    <Option value="2">6-Ch S/E</Option>
+                    <Option value="3">Tape</Option>
+                    <Option value="4">FM/AM</Option>
+                    <Option value="5">DVD1</Option>
+                    <Option value="6">TV1</Option>
+                    <Option value="7">SAT1</Option>
+                    <Option value="8">VCR</Option>
+                    <Option value="9">AUX</Option>
+                    <Option value="d">DVD2</Option>
+                    <Option value="e">DVD3</Option>
+                    <Option value="f">DVD4</Option>
+                    <Option value="g">TV2</Option>
+                    <Option value="h">TV3</Option>
+                    <Option value="i">TV4</Option>
+                    <Option value="j">SAT2</Option>
+                </List>
+                <DefaultValue>9</DefaultValue>
+            </Field>
+            <Field type="menu" id="valueCode">
+                <Label>Re-EQ</Label>
+                <List>
+                    <Option value="0">Off</Option>
+                    <Option value="1">On</Option>
+                </List>
+                <DefaultValue>0</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="setRecordSimulcast" deviceFilter="self">
+        <Name>Z1 Record Set Simulcast (Video+Audio)</Name>
+        <CallbackMethod>set_record_simulcast</CallbackMethod>
+        <ConfigUI>
+            <Field type="menu" id="video">
+                <Label>Video Source</Label>
+                <List>
+                    <Option value="0">CD</Option>
+                    <Option value="1">2-Ch BAL</Option>
+                    <Option value="2">6-Ch S/E</Option>
+                    <Option value="3">Tape</Option>
+                    <Option value="4">FM/AM</Option>
+                    <Option value="5">DVD1</Option>
+                    <Option value="6">TV1</Option>
+                    <Option value="7">SAT1</Option>
+                    <Option value="8">VCR</Option>
+                    <Option value="9">AUX</Option>
+                    <Option value="c">Current</Option>
+                    <Option value="d">DVD2</Option>
+                    <Option value="e">DVD3</Option>
+                    <Option value="f">DVD4</Option>
+                    <Option value="g">TV2</Option>
+                    <Option value="h">TV3</Option>
+                    <Option value="i">TV4</Option>
+                    <Option value="j">SAT2</Option>
+                </List>
+            </Field>
+            <Field type="menu" id="audio">
+                <Label>Audio Source</Label>
+                <List>
+                    <Option value="0">CD</Option>
+                    <Option value="1">2-Ch BAL</Option>
+                    <Option value="2">6-Ch S/E</Option>
+                    <Option value="3">Tape</Option>
+                    <Option value="4">FM/AM</Option>
+                    <Option value="5">DVD1</Option>
+                    <Option value="6">TV1</Option>
+                    <Option value="7">SAT1</Option>
+                    <Option value="8">VCR</Option>
+                    <Option value="9">AUX</Option>
+                    <Option value="c">Current</Option>
+                    <Option value="d">DVD2</Option>
+                    <Option value="e">DVD3</Option>
+                    <Option value="f">DVD4</Option>
+                    <Option value="g">TV2</Option>
+                    <Option value="h">TV3</Option>
+                    <Option value="i">TV4</Option>
+                    <Option value="j">SAT2</Option>
+                </List>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="setRecordSource" deviceFilter="self">
+        <Name>Z1 Record Set Source</Name>
+        <CallbackMethod>set_record_source</CallbackMethod>
+        <ConfigUI>
+            <Field type="menu" id="src">
+                <Label>Record Source</Label>
+                <List>
+                    <Option value="0">CD</Option>
+                    <Option value="1">2-Ch BAL</Option>
+                    <Option value="2">6-Ch S/E</Option>
+                    <Option value="3">Tape</Option>
+                    <Option value="4">FM/AM</Option>
+                    <Option value="5">DVD1</Option>
+                    <Option value="6">TV1</Option>
+                    <Option value="7">SAT1</Option>
+                    <Option value="8">VCR</Option>
+                    <Option value="9">AUX</Option>
+                    <Option value="c">Current</Option>
+                    <Option value="d">DVD2</Option>
+                    <Option value="e">DVD3</Option>
+                    <Option value="f">DVD4</Option>
+                    <Option value="g">TV2</Option>
+                    <Option value="h">TV3</Option>
+                    <Option value="i">TV4</Option>
+                    <Option value="j">SAT2</Option>
+                </List>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="refreshMainAll" deviceFilter="self">
+        <Name>Z1 Refresh All Advanced</Name>
+        <CallbackMethod>refresh_main_all</CallbackMethod>
+    </Action>
+    <Action id="refreshMainBasic" deviceFilter="self">
+        <Name>Z1 Refresh Basic</Name>
+        <CallbackMethod>refresh_main_basic</CallbackMethod>
+    </Action>
+    <Action id="refreshMainAudioLevels" deviceFilter="self">
+        <Name>Z1 Refresh Channel Trims</Name>
+        <CallbackMethod>refresh_main_audio_levels</CallbackMethod>
+    </Action>
+    <Action id="refreshMainProcessing" deviceFilter="self">
+        <Name>Z1 Refresh Decoder/Effects</Name>
+        <CallbackMethod>refresh_main_processing</CallbackMethod>
+    </Action>
+    <Action id="refresh" deviceFilter="self">
+        <Name>Z1 Refresh Status</Name>
+        <CallbackMethod>refresh_status</CallbackMethod>
+    </Action>
+    <Action id="refreshMainToneBalance" deviceFilter="self">
+        <Name>Z1 Refresh Tone/Balance</Name>
+        <CallbackMethod>refresh_main_tone_balance</CallbackMethod>
+    </Action>
+    <Action id="setMainTrimBack" deviceFilter="self">
+        <Name>Z1 Trim Set Back Surround (dB)</Name>
+        <CallbackMethod>set_main_trim_back</CallbackMethod>
+        <ConfigUI>
+            <Field type="textfield" id="db">
+                <Label>Back Surround Trim (dB)</Label>
+                <Description>Range: +10.0 to -10.0 in 0.5 dB steps</Description>
+                <DefaultValue>0.0</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="setMainTrimCenter" deviceFilter="self">
+        <Name>Z1 Trim Set Center (dB)</Name>
+        <CallbackMethod>set_main_trim_center</CallbackMethod>
+        <ConfigUI>
+            <Field type="textfield" id="db">
+                <Label>Center Trim (dB)</Label>
+                <Description>Range: +10.0 to -10.0 in 0.5 dB steps (example: +2.0)</Description>
+                <DefaultValue>0.0</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="setMainTrimFront" deviceFilter="self">
+        <Name>Z1 Trim Set Front (dB)</Name>
+        <CallbackMethod>set_main_trim_front</CallbackMethod>
+        <ConfigUI>
+            <Field type="textfield" id="db">
+                <Label>Front Trim (dB)</Label>
+                <Description>Range: +10.0 to -10.0 in 0.5 dB steps (example: -1.5)</Description>
+                <DefaultValue>0.0</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="setMainTrimLfe" deviceFilter="self">
+        <Name>Z1 Trim Set LFE (dB)</Name>
+        <CallbackMethod>set_main_trim_lfe</CallbackMethod>
+        <ConfigUI>
+            <Field type="textfield" id="db">
+                <Label>LFE Trim (dB)</Label>
+                <Description>Range: +0.0 to -10.0 in 0.5 dB steps</Description>
+                <DefaultValue>0.0</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="setMainTrimSub" deviceFilter="self">
+        <Name>Z1 Trim Set Sub (dB)</Name>
+        <CallbackMethod>set_main_trim_sub</CallbackMethod>
+        <ConfigUI>
+            <Field type="textfield" id="db">
+                <Label>Sub Trim (dB)</Label>
+                <Description>Range: +20.0 to -30.0 in 0.5 dB steps</Description>
+                <DefaultValue>0.0</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="setMainTrimSurround" deviceFilter="self">
+        <Name>Z1 Trim Set Surround (dB)</Name>
+        <CallbackMethod>set_main_trim_surround</CallbackMethod>
+        <ConfigUI>
+            <Field type="textfield" id="db">
+                <Label>Surround Trim (dB)</Label>
+                <Description>Range: +10.0 to -10.0 in 0.5 dB steps</Description>
+                <DefaultValue>0.0</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="stepMainTrimBackDown" deviceFilter="self">
+        <Name>Z1 Trim Step Back Surround Down</Name>
+        <CallbackMethod>step_main_trim_back_down</CallbackMethod>
+        <ConfigUI>
+            <Field type="textfield" id="stepDb">
+                <Label>Step Size (dB)</Label>
+                <Description>Default 0.5 dB. Must be in 0.5 dB increments.</Description>
+                <DefaultValue>0.5</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="stepMainTrimBackUp" deviceFilter="self">
+        <Name>Z1 Trim Step Back Surround Up</Name>
+        <CallbackMethod>step_main_trim_back_up</CallbackMethod>
+        <ConfigUI>
+            <Field type="textfield" id="stepDb">
+                <Label>Step Size (dB)</Label>
+                <Description>Default 0.5 dB. Must be in 0.5 dB increments.</Description>
+                <DefaultValue>0.5</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="stepMainTrimCenterDown" deviceFilter="self">
+        <Name>Z1 Trim Step Center Down</Name>
+        <CallbackMethod>step_main_trim_center_down</CallbackMethod>
+        <ConfigUI>
+            <Field type="textfield" id="stepDb">
+                <Label>Step Size (dB)</Label>
+                <Description>Default 0.5 dB. Must be in 0.5 dB increments.</Description>
+                <DefaultValue>0.5</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="stepMainTrimCenterUp" deviceFilter="self">
+        <Name>Z1 Trim Step Center Up</Name>
+        <CallbackMethod>step_main_trim_center_up</CallbackMethod>
+        <ConfigUI>
+            <Field type="textfield" id="stepDb">
+                <Label>Step Size (dB)</Label>
+                <Description>Default 0.5 dB. Must be in 0.5 dB increments.</Description>
+                <DefaultValue>0.5</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="stepMainTrimFrontDown" deviceFilter="self">
+        <Name>Z1 Trim Step Front Down</Name>
+        <CallbackMethod>step_main_trim_front_down</CallbackMethod>
+        <ConfigUI>
+            <Field type="textfield" id="stepDb">
+                <Label>Step Size (dB)</Label>
+                <Description>Default 0.5 dB. Must be in 0.5 dB increments.</Description>
+                <DefaultValue>0.5</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="stepMainTrimFrontUp" deviceFilter="self">
+        <Name>Z1 Trim Step Front Up</Name>
+        <CallbackMethod>step_main_trim_front_up</CallbackMethod>
+        <ConfigUI>
+            <Field type="textfield" id="stepDb">
+                <Label>Step Size (dB)</Label>
+                <Description>Default 0.5 dB. Must be in 0.5 dB increments.</Description>
+                <DefaultValue>0.5</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="stepMainTrimLfeDown" deviceFilter="self">
+        <Name>Z1 Trim Step LFE Down</Name>
+        <CallbackMethod>step_main_trim_lfe_down</CallbackMethod>
+        <ConfigUI>
+            <Field type="textfield" id="stepDb">
+                <Label>Step Size (dB)</Label>
+                <Description>Default 0.5 dB. Must be in 0.5 dB increments.</Description>
+                <DefaultValue>0.5</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="stepMainTrimLfeUp" deviceFilter="self">
+        <Name>Z1 Trim Step LFE Up</Name>
+        <CallbackMethod>step_main_trim_lfe_up</CallbackMethod>
+        <ConfigUI>
+            <Field type="textfield" id="stepDb">
+                <Label>Step Size (dB)</Label>
+                <Description>Default 0.5 dB. Must be in 0.5 dB increments.</Description>
+                <DefaultValue>0.5</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="stepMainTrimSubDown" deviceFilter="self">
+        <Name>Z1 Trim Step Sub Down</Name>
+        <CallbackMethod>step_main_trim_sub_down</CallbackMethod>
+        <ConfigUI>
+            <Field type="textfield" id="stepDb">
+                <Label>Step Size (dB)</Label>
+                <Description>Default 0.5 dB. Must be in 0.5 dB increments.</Description>
+                <DefaultValue>0.5</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="stepMainTrimSubUp" deviceFilter="self">
+        <Name>Z1 Trim Step Sub Up</Name>
+        <CallbackMethod>step_main_trim_sub_up</CallbackMethod>
+        <ConfigUI>
+            <Field type="textfield" id="stepDb">
+                <Label>Step Size (dB)</Label>
+                <Description>Default 0.5 dB. Must be in 0.5 dB increments.</Description>
+                <DefaultValue>0.5</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="stepMainTrimSurroundDown" deviceFilter="self">
+        <Name>Z1 Trim Step Surround Down</Name>
+        <CallbackMethod>step_main_trim_surround_down</CallbackMethod>
+        <ConfigUI>
+            <Field type="textfield" id="stepDb">
+                <Label>Step Size (dB)</Label>
+                <Description>Default 0.5 dB. Must be in 0.5 dB increments.</Description>
+                <DefaultValue>0.5</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="stepMainTrimSurroundUp" deviceFilter="self">
+        <Name>Z1 Trim Step Surround Up</Name>
+        <CallbackMethod>step_main_trim_surround_up</CallbackMethod>
+        <ConfigUI>
+            <Field type="textfield" id="stepDb">
+                <Label>Step Size (dB)</Label>
+                <Description>Default 0.5 dB. Must be in 0.5 dB increments.</Description>
+                <DefaultValue>0.5</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="z2MuteOff" deviceFilter="self">
+        <Name>Z2 Basic Mute Off</Name>
+        <CallbackMethod>mute_off_z2</CallbackMethod>
+    </Action>
+    <Action id="z2MuteOn" deviceFilter="self">
+        <Name>Z2 Basic Mute On</Name>
+        <CallbackMethod>mute_on_z2</CallbackMethod>
+    </Action>
+    <Action id="z2PowerOff" deviceFilter="self">
+        <Name>Z2 Basic Power Off</Name>
+        <CallbackMethod>power_off_z2</CallbackMethod>
+    </Action>
+    <Action id="z2PowerOn" deviceFilter="self">
+        <Name>Z2 Basic Power On</Name>
+        <CallbackMethod>power_on_z2</CallbackMethod>
+    </Action>
+    <Action id="z2SetSource" deviceFilter="self">
+        <Name>Z2 Basic Set Source</Name>
+        <CallbackMethod>source_set_z2</CallbackMethod>
+        <ConfigUI>
+            <Field type="menu" id="sourceCode">
+                <Label>Source</Label>
+                <List>
+                    <Option value="0">CD</Option>
+                    <Option value="1">2-Ch BAL</Option>
+                    <Option value="2">6-Ch S/E</Option>
+                    <Option value="3">Tape</Option>
+                    <Option value="4">FM/AM</Option>
+                    <Option value="5">DVD1</Option>
+                    <Option value="6">TV1</Option>
+                    <Option value="7">SAT1</Option>
+                    <Option value="8">VCR</Option>
+                    <Option value="9">AUX</Option>
+                    <Option value="c">Current</Option>
+                    <Option value="d">DVD2</Option>
+                    <Option value="e">DVD3</Option>
+                    <Option value="f">DVD4</Option>
+                    <Option value="g">TV2</Option>
+                    <Option value="h">TV3</Option>
+                    <Option value="i">TV4</Option>
+                    <Option value="j">SAT2</Option>
+                </List>
+                <DefaultValue>5</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="z2SetVolume" deviceFilter="self">
+        <Name>Z2 Basic Set Volume (dB)</Name>
+        <CallbackMethod>volume_set_z2</CallbackMethod>
+        <ConfigUI>
+            <Field type="textfield" id="volumeDb">
+                <Label>Volume (dB)</Label>
+                <Description>Example: -35.0</Description>
+                <DefaultValue>-35.0</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="z2VolumeDown" deviceFilter="self">
+        <Name>Z2 Basic Volume Down</Name>
+        <CallbackMethod>volume_step_down_z2</CallbackMethod>
+        <ConfigUI>
+            <Field type="textfield" id="stepDb">
+                <Label>Step (dB)</Label>
+                <Description>Leave blank for one step (VU/VD). Enter a value (e.g. 2 or 2.5) to change by that amount.</Description>
+                <DefaultValue />
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="z2VolumeUp" deviceFilter="self">
+        <Name>Z2 Basic Volume Up</Name>
+        <CallbackMethod>volume_step_up_z2</CallbackMethod>
+        <ConfigUI>
+            <Field type="textfield" id="stepDb">
+                <Label>Step (dB)</Label>
+                <Description>Leave blank for one step (VU/VD). Enter a value (e.g. 2 or 2.5) to change by that amount.</Description>
+                <DefaultValue />
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="z3MuteOff" deviceFilter="self">
+        <Name>Z3 Basic Mute Off</Name>
+        <CallbackMethod>mute_off_z3</CallbackMethod>
+    </Action>
+    <Action id="z3MuteOn" deviceFilter="self">
+        <Name>Z3 Basic Mute On</Name>
+        <CallbackMethod>mute_on_z3</CallbackMethod>
+    </Action>
+    <Action id="z3PowerOff" deviceFilter="self">
+        <Name>Z3 Basic Power Off</Name>
+        <CallbackMethod>power_off_z3</CallbackMethod>
+    </Action>
+    <Action id="z3PowerOn" deviceFilter="self">
+        <Name>Z3 Basic Power On</Name>
+        <CallbackMethod>power_on_z3</CallbackMethod>
+    </Action>
+    <Action id="z3SetSource" deviceFilter="self">
+        <Name>Z3 Basic Set Source</Name>
+        <CallbackMethod>source_set_z3</CallbackMethod>
+        <ConfigUI>
+            <Field type="menu" id="sourceCode">
+                <Label>Source</Label>
+                <List>
+                    <Option value="0">CD</Option>
+                    <Option value="1">2-Ch BAL</Option>
+                    <Option value="2">6-Ch S/E</Option>
+                    <Option value="3">Tape</Option>
+                    <Option value="4">FM/AM</Option>
+                    <Option value="5">DVD1</Option>
+                    <Option value="6">TV1</Option>
+                    <Option value="7">SAT1</Option>
+                    <Option value="8">VCR</Option>
+                    <Option value="9">AUX</Option>
+                    <Option value="c">Current</Option>
+                    <Option value="d">DVD2</Option>
+                    <Option value="e">DVD3</Option>
+                    <Option value="f">DVD4</Option>
+                    <Option value="g">TV2</Option>
+                    <Option value="h">TV3</Option>
+                    <Option value="i">TV4</Option>
+                    <Option value="j">SAT2</Option>
+                </List>
+                <DefaultValue>5</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="z3SetVolume" deviceFilter="self">
+        <Name>Z3 Basic Set Volume (dB)</Name>
+        <CallbackMethod>volume_set_z3</CallbackMethod>
+        <ConfigUI>
+            <Field type="textfield" id="volumeDb">
+                <Label>Volume (dB)</Label>
+                <Description>Example: -35.0</Description>
+                <DefaultValue>-35.0</DefaultValue>
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="z3VolumeDown" deviceFilter="self">
+        <Name>Z3 Basic Volume Down</Name>
+        <CallbackMethod>volume_step_down_z3</CallbackMethod>
+        <ConfigUI>
+            <Field type="textfield" id="stepDb">
+                <Label>Step (dB)</Label>
+                <Description>Leave blank for one step (VU/VD). Enter a value (e.g. 2 or 2.5) to change by that amount.</Description>
+                <DefaultValue />
+            </Field>
+        </ConfigUI>
+    </Action>
+    <Action id="z3VolumeUp" deviceFilter="self">
+        <Name>Z3 Basic Volume Up</Name>
+        <CallbackMethod>volume_step_up_z3</CallbackMethod>
+        <ConfigUI>
+            <Field type="textfield" id="stepDb">
+                <Label>Step (dB)</Label>
+                <Description>Leave blank for one step (VU/VD). Enter a value (e.g. 2 or 2.5) to change by that amount.</Description>
+                <DefaultValue />
+            </Field>
+        </ConfigUI>
+    </Action>
+</Actions>
