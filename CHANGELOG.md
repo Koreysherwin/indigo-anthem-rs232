@@ -1,1 +1,1 @@
-v0.3.32 - Organized actions and naming cleanup
+v0.3.34 - Organized actions and naming cleanup
