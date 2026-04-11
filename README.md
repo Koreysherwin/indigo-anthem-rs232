@@ -111,16 +111,15 @@ Shows detailed RS232 transmit and receive logging for troubleshooting and develo
 
 ## Release Information
 
-Current public repository release: `v0.3.32`. :contentReference[oaicite:1]{index=1}
+Current public repository release: `v0.3.32`
 
-For downloads and release notes, see the repository Releases section. :contentReference[oaicite:2]{index=2}
-
+For downloads and release notes, see the repository Releases section.
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details. :contentReference[oaicite:3]{index=3}
+This project is licensed under the MIT License. See the `LICENSE` file for details. 
 
 ## Credits
 
-Developed by Korey Sherwin.
+Developed by Korey Sherwin & Chat.
 
 Built through real-world testing with Anthem processors and Global Caché IP2SL hardware.
