@@ -1,121 +1,126 @@
 # Anthem RS232 Plugin for Indigo
 
-Control Anthem processors (Statement D1, D2, AVM50) via RS232 using Indigo and a Global Caché IP2SL.
+Control Anthem processors (Statement D1, D2, and AVM50) from Indigo over RS232 using a Global Caché IP2SL.
 
----
+## Overview
 
-## ✨ Features
+This plugin provides Indigo control and status feedback for supported Anthem processors, including multi-zone operation, source selection, volume control, mute, processing mode selection, channel trims, and record output routing.
 
-- ✅ Zone 1 / Zone 2 / Zone 3 control
-- ✅ Power, Source, Volume, Mute control
-- ✅ Proper per-zone command handling
-- ✅ Channel trim control (Front, Center, Surround, Sub, LFE, etc.)
-- ✅ Trim step up/down controls
-- ✅ Processing mode selection (Dolby, DTS, THX, AnthemLogic, etc.)
-- ✅ Live processing mode feedback
-- ✅ Record output (Zone 4) control
-- ✅ Configurable debug logging (RS232 TX/RX visibility)
-- ✅ Clean, organized Action Groups (Z1 / Z2 / Z3)
+## Features
 
----
+- Zone 1, Zone 2, and Zone 3 control
+- Power, source, volume, and mute control
+- Proper per-zone command handling
+- Channel trim control for Front, Center, Surround, Sub, LFE, and more
+- Trim step up and step down controls
+- Processing mode selection including Dolby, DTS, THX, AnthemLogic, and others
+- Live processing mode feedback
+- Record output (Zone 4) control
+- Configurable debug logging with RS232 TX/RX visibility
+- Organized Indigo action groups for Z1, Z2, and Z3
+- Status request button for processor and zone refresh
 
-## 🔌 Requirements
+## Requirements
 
 - Indigo 2025.1 or later
 - Anthem processor with RS232 control:
   - Statement D1
   - Statement D2
   - AVM50
-- Serial connection:
-  - Global Caché IP2SL
- 
+- Global Caché IP2SL serial adapter
+- Network access to the IP2SL on TCP port 4999
 
----
+## Installation
 
-## ⚙️ Installation
+1. Download the latest plugin release zip.
+2. Double-click the plugin zip or the included `.indigoPlugin` file to install it into Indigo.
+3. Restart Indigo if prompted.
 
-1. Download the latest release `.indigoPlugin.zip`
-2. Double-click the file to install into Indigo
-3. Restart Indigo (if prompted)
+## Configuration
 
----
-
-## 🛠 Configuration
-
-1. Create a new device:
-   - **Plugin** → Anthem RS232
-2. Enter:
-   - IP address of your Global Caché IP2SL
-   - Port: 4999
-   - Command Terminator: LF (\n)
-3. Select processor model:
+1. In Indigo, create a new device using the Anthem RS232 plugin.
+2. Enter the IP address of your Global Caché IP2SL.
+3. Set the port to `4999`.
+4. Set the command terminator to `LF (\n)` if needed.
+5. Select the processor model:
    - D1
    - D2 / AVM50
 
-The plugin will automatically create Zone 2 and Zone 3 devices.
+The plugin will automatically create the appropriate child zone devices.
 
----
+## Usage
 
-## 🎛 Usage
+### Main Controls
 
-### Control via Action Groups
-- Z1 / Z2 / Z3 Basic controls (Power, Volume, Source)
-- Z1 Trim controls (Set + Step)
-- Z1 Processing modes
+The plugin supports the following control functions:
+
+- Power on and off
+- Source selection
+- Volume up, down, and set
+- Mute
+- Processing mode selection
+- Channel trim adjustment
+- Record output routing
+
+### Action Groups
+
+You can use Indigo action groups for common tasks such as:
+
+- Zone 1 basic controls
+- Zone 2 basic controls
+- Zone 3 basic controls
+- Zone 1 trim controls
+- Zone 1 processing mode changes
 - Record output routing
 
 ### Control Pages
-You can build control pages using:
+
+The plugin is suitable for Indigo control pages using states and actions such as:
+
 - Volume
 - Source
-- Processing Mode
+- Processing mode
 - Trim adjustments
+- Power status
 
----
+## Status Refresh
 
-## 🔍 Debug Logging
+The plugin includes a status request control for refreshing device state.
 
-The plugin includes selectable logging levels:
+- On the main processor device, it triggers a full processor refresh.
+- On zone devices, it triggers a zone-specific refresh.
 
-- **Normal**
-  - Clean logs (no RS232 traffic)
-- **Debug**
-  - Shows full TX/RX serial communication
+## Debug Logging
 
-Useful for troubleshooting or development.
+The plugin supports selectable logging levels:
 
----
+### Normal
 
-## 🔄 Status Refresh
+Shows clean operational logs without raw RS232 traffic.
 
-- Device “Send Status Request” button triggers:
-  - Full refresh on main processor
-  - Zone-specific refresh on Zone devices
+### Debug
 
----
+Shows detailed RS232 transmit and receive logging for troubleshooting and development.
 
-## 🧠 Notes
+## Notes
 
-- Zone 1 uses `P1VM` volume commands  
-- Zone 2 uses `P2V` command family  
-- Zone 3 uses `P3V` command family  
-- Command handling varies slightly per zone — this plugin accounts for those differences
+- Zone 1 uses the `P1VM` volume command family.
+- Zone 2 uses the `P2V` command family.
+- Zone 3 uses the `P3V` command family.
+- The plugin handles the command differences between zones automatically.
 
----
+## Release Information
 
-## 📦 Release
+Current public repository release: `v0.3.32`. :contentReference[oaicite:1]{index=1}
 
-See [Releases](../../releases) for downloadable plugin versions.
+For downloads and release notes, see the repository Releases section. :contentReference[oaicite:2]{index=2}
 
----
+## License
 
-## 📜 License
+This project is licensed under the MIT License. See the `LICENSE` file for details. :contentReference[oaicite:3]{index=3}
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+## Credits
 
----
+Developed by Korey Sherwin.
 
-## 🙌 Credits
-
-Developed by  Korey Sherwin  
-Built with ChatGPT help from real-world testing and Anthem RS232 protocol documentation
+Built through real-world testing with Anthem processors and Global Caché IP2SL hardware.
