@@ -23,14 +23,24 @@
             <Field type="menu" id="sourceCode">
                 <Label>Source</Label>
                 <List>
-                    <Option value="0">CD</Option>
-                    <Option value="5">DVD1</Option>
-                    <Option value="6">TV1</Option>
-                    <Option value="7">SAT1</Option>
-                    <Option value="9">AUX</Option>
-                    <Option value="d">DVD2</Option>
-                    <Option value="g">TV2</Option>
-                    <Option value="j">SAT2</Option>
+  				     <Option value="0">CD</Option>
+   					 <Option value="1">2-Ch BAL</Option>
+				     <Option value="2">6-Ch S/E</Option>
+ 					 <Option value="3">Tape</Option>
+ 				     <Option value="4">FM/AM</Option>
+ 				     <Option value="5">DVD1</Option>
+ 				     <Option value="6">TV1</Option>
+ 				     <Option value="7">SAT1</Option>
+ 				     <Option value="8">VCR</Option>
+					 <Option value="9">AUX</Option>
+ 					 <Option value="c">Current Main Zone Source</Option>
+				     <Option value="d">DVD2</Option>
+					 <Option value="e">DVD3</Option>
+ 				     <Option value="f">DVD4</Option>
+				     <Option value="g">TV2</Option>
+  				     <Option value="h">TV3</Option>
+  				     <Option value="i">TV4</Option>
+  					 <Option value="j">SAT2</Option>
                 </List>
                 <DefaultValue>5</DefaultValue>
             </Field>
